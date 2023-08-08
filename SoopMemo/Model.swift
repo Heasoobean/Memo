@@ -2,7 +2,7 @@
 //  Model.swift
 //  SoopMemo
 //
-//  Created by 허수빈 on 2023/08/07.
+//  Created by 허수빈 on 2023/08/08.
 //
 
 import Foundation
@@ -18,6 +18,6 @@ class Memo {
     
     static var dummyMemoList = [
         Memo(content: "Lorem Ipsum"),
-        Memo(content: "Scbscribe")
+        Memo(content: "Subscribe")
     ]
 }

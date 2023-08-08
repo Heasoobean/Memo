@@ -2,7 +2,7 @@
 //  MemoListTableViewController.swift
 //  SoopMemo
 //
-//  Created by 허수빈 on 2023/08/07.
+//  Created by 허수빈 on 2023/08/08.
 //
 
 import UIKit
@@ -13,9 +13,7 @@ class MemoListTableViewController: UITableViewController {
         f.dateStyle = .long
         f.timeStyle = .short
         return f
-    }()
-    
-    
+    } ()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -23,6 +21,7 @@ class MemoListTableViewController: UITableViewController {
         tableView.reloadData()
         print(#function)
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +34,7 @@ class MemoListTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,6 +50,7 @@ class MemoListTableViewController: UITableViewController {
         let target = Memo.dummyMemoList[indexPath.row]
         cell.textLabel?.text = target.content
         cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
+        
         return cell
     }
     
