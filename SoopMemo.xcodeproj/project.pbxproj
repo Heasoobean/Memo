@@ -12,6 +12,8 @@
 		B33697C72A820779008B92CB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33697C62A820779008B92CB /* Model.swift */; };
 		B33697C92A821BE2008B92CB /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33697C82A821BE2008B92CB /* ComposeViewController.swift */; };
 		B33697CB2A821D85008B92CB /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33697CA2A821D85008B92CB /* UIViewController+Alert.swift */; };
+		B33697CD2A822D78008B92CB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33697CC2A822D78008B92CB /* DetailViewController.swift */; };
+		B33697D02A825F26008B92CB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33697CF2A825F26008B92CB /* DataManager.swift */; };
 		B3D4B1022A810498000E7877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4B1012A810498000E7877 /* AppDelegate.swift */; };
 		B3D4B1042A810498000E7877 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4B1032A810498000E7877 /* SceneDelegate.swift */; };
 		B3D4B1062A810498000E7877 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4B1052A810498000E7877 /* ViewController.swift */; };
@@ -27,6 +29,8 @@
 		B33697C62A820779008B92CB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B33697C82A821BE2008B92CB /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		B33697CA2A821D85008B92CB /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		B33697CC2A822D78008B92CB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B33697CF2A825F26008B92CB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B3D4B0FE2A810498000E7877 /* SoopMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoopMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D4B1012A810498000E7877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3D4B1032A810498000E7877 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B33697CE2A825F09008B92CB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B33697CF2A825F26008B92CB /* DataManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		B3D4B0F52A810498000E7877 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +80,7 @@
 		B3D4B1002A810498000E7877 /* SoopMemo */ = {
 			isa = PBXGroup;
 			children = (
+				B33697CE2A825F09008B92CB /* Data */,
 				B3D4B1182A81062B000E7877 /* Model */,
 				B3D4B1012A810498000E7877 /* AppDelegate.swift */,
 				B3D4B1032A810498000E7877 /* SceneDelegate.swift */,
@@ -82,6 +95,7 @@
 				B3D4B10F2A810499000E7877 /* LaunchScreen.storyboard */,
 				B3D4B1122A810499000E7877 /* Info.plist */,
 				B3D4B10A2A810498000E7877 /* SoopMemo.xcdatamodeld */,
+				B33697CC2A822D78008B92CB /* DetailViewController.swift */,
 			);
 			path = SoopMemo;
 			sourceTree = "<group>";
@@ -171,6 +185,8 @@
 				B33697C92A821BE2008B92CB /* ComposeViewController.swift in Sources */,
 				B33697C32A81F837008B92CB /* HomeMainViewController.swift in Sources */,
 				B3D4B1022A810498000E7877 /* AppDelegate.swift in Sources */,
+				B33697CD2A822D78008B92CB /* DetailViewController.swift in Sources */,
+				B33697D02A825F26008B92CB /* DataManager.swift in Sources */,
 				B3D4B1042A810498000E7877 /* SceneDelegate.swift in Sources */,
 				B33697C52A8206CC008B92CB /* MemoListTableViewController.swift in Sources */,
 			);
