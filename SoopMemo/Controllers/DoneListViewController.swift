@@ -12,7 +12,6 @@ class DoneListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var token: NSObjectProtocol?
-    var task: Task?
     
     deinit {
         if let token = token {
@@ -21,7 +20,7 @@ class DoneListViewController: UIViewController {
         
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -42,7 +41,7 @@ class DoneListViewController: UIViewController {
         }
         
     }
-
+    
 }
 
 extension DoneListViewController: UITableViewDelegate {
@@ -58,11 +57,12 @@ extension DoneListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celldone", for: indexPath) as! DoneListTableViewCell
-
+        
         cell.selectionStyle = .none
         let target = DataManager.shared.memoList[indexPath.row]
         cell.doneLabel.text = target.content
-        
+        cell.index = indexPath.row
+        cell.taskSwitch.isOn = target.isCompleted
         
         return cell
     }

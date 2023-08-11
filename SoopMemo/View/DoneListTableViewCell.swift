@@ -13,20 +13,11 @@ class DoneListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var taskSwitch: UISwitch!
     
-    var task: Task?
+    let memo = DataManager.shared.memoList
+    var index = 0
     
     @IBAction func switchChanged(_ sender: Any) {
-        guard let task else { return }
-        if taskSwitch.isOn {
-//            textLabel?.text = nil
-            taskSwitch.isOn.toggle()
-            TaskList.completeTask(task: task, isCompleted: true)
-        } else {
-//            textLabel?.attributedText = nil
-//            textLabel?.text = task.title
-            taskSwitch.isOn.toggle()
-            TaskList.completeTask(task: task, isCompleted: false)
-        }
+        memo[index].isCompleted = taskSwitch.isOn
     }
     
 

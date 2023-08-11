@@ -73,7 +73,6 @@
 				B33697C42A8206CC008B92CB /* MemoListTableViewController.swift */,
 				B33697C82A821BE2008B92CB /* ComposeViewController.swift */,
 				B33697CC2A822D78008B92CB /* DetailViewController.swift */,
-				B33697CA2A821D85008B92CB /* UIViewController+Alert.swift */,
 				B33697C22A81F837008B92CB /* HomeMainViewController.swift */,
 				B369695F2A8490A600969F12 /* DoneListViewController.swift */,
 				B3D4B1052A810498000E7877 /* ViewController.swift */,
@@ -87,6 +86,14 @@
 				B369695D2A84906B00969F12 /* DoneListTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B34AB3C12A84D135002A19DC /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				B33697CA2A821D85008B92CB /* UIViewController+Alert.swift */,
+			);
+			path = Extention;
 			sourceTree = "<group>";
 		};
 		B3D4B0F52A810498000E7877 = {
@@ -111,6 +118,7 @@
 				B3D4B1012A810498000E7877 /* AppDelegate.swift */,
 				B3D4B1032A810498000E7877 /* SceneDelegate.swift */,
 				B33697CE2A825F09008B92CB /* Data */,
+				B34AB3C12A84D135002A19DC /* Extention */,
 				B3D4B1182A81062B000E7877 /* Model */,
 				B34AB3C02A84AFD5002A19DC /* View */,
 				B34AB3BF2A84AF8C002A19DC /* Controllers */,
