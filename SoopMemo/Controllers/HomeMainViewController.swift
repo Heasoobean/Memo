@@ -7,41 +7,41 @@
 
 
 
-//홈 화면에 버튼 스타일 지정. 그림자 준 것.
 import UIKit
 
 class HomeMainViewController: UIViewController {
     @IBOutlet weak var todoButton: UIButton!
-    
-
+    @IBOutlet weak var mymemoText: UITextView! 
     @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        todoButton.layer.shadowColor = UIColor.black.cgColor // 색깔
-        todoButton.layer.masksToBounds = false
-        todoButton.layer.shadowOffset = CGSize(width: 0, height: 4) // 위치조정
-        todoButton.layer.shadowRadius = 5 // 반경
-        todoButton.layer.shadowOpacity = 0.3
-     
-        doneButton.layer.shadowColor = UIColor.black.cgColor // 색깔
-        doneButton.layer.masksToBounds = false
-        doneButton.layer.shadowOffset = CGSize(width: 0, height: 4) // 위치조정
-        doneButton.layer.shadowRadius = 5 // 반경
-        doneButton.layer.shadowOpacity = 0.3
+        self.view.sendSubviewToBack(backgroundImage)
         
+        // 저장된 메모 불러오기
+        if let savedMemo = UserDefaults.standard.string(forKey: "userMemo") {
+            mymemoText.text = savedMemo
+        }
+        
+             mymemoText.delegate = self
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+extension HomeMainViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        // 메모가 변경되었을 때 호출되는 메서드
+        // 변경된 메모를 UserDefaults에 저장
+        UserDefaults.standard.set(textView.text, forKey: "userMemo")
+    }
+}
+
+
+
+
+
+
+
+
+

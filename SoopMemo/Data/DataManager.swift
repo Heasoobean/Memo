@@ -51,7 +51,6 @@ class DataManager {
         }
     }
     
-    
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
@@ -74,12 +73,21 @@ class DataManager {
             do {
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }
     
+    func numberOfSections() -> Int {
+        // 여기에 섹션 개수를 반환하는 로직을 구현해야 합니다.
+        // 예시로 1을 반환하도록 설정합니다.
+        return 2
+    }
+    
+    func numberOfRows(in section: Int) -> Int {
+        // 여기에 해당 섹션의 행 개수를 반환하는 로직을 구현해야 합니다.
+        // 예시로 memoList의 개수를 반환하도록 설정합니다.
+        return memoList.count
+    }
 }

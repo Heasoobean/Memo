@@ -117,11 +117,11 @@
 			children = (
 				B3D4B1012A810498000E7877 /* AppDelegate.swift */,
 				B3D4B1032A810498000E7877 /* SceneDelegate.swift */,
-				B33697CE2A825F09008B92CB /* Data */,
-				B34AB3C12A84D135002A19DC /* Extention */,
 				B3D4B1182A81062B000E7877 /* Model */,
 				B34AB3C02A84AFD5002A19DC /* View */,
 				B34AB3BF2A84AF8C002A19DC /* Controllers */,
+				B33697CE2A825F09008B92CB /* Data */,
+				B34AB3C12A84D135002A19DC /* Extention */,
 				B3D4B1072A810498000E7877 /* Main.storyboard */,
 				B3D4B10D2A810499000E7877 /* Assets.xcassets */,
 				B3D4B10F2A810499000E7877 /* LaunchScreen.storyboard */,
