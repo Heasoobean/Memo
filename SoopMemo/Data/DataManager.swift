@@ -82,7 +82,7 @@ class DataManager {
     func numberOfSections() -> Int {
         // 여기에 섹션 개수를 반환하는 로직을 구현해야 합니다.
         // 예시로 1을 반환하도록 설정합니다.
-        return 2
+        return 1
     }
     
     func numberOfRows(in section: Int) -> Int {

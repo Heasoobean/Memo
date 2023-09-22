@@ -46,21 +46,6 @@ class MemoListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let imageUrl = URL(string: "https://ifh.cc/g/4Vmy0F.jpg") {
-            // URLSession을 사용하여 이미지 다운로드
-            URLSession.shared.dataTask(with: imageUrl) { [weak self] data, response, error in
-                if let error = error {
-                    print("Error downloading image: \(error)")
-                    return
-                }
-                
-                if let data = data, let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.todoImageView.image = image
-                    }
-                }
-            }.resume()
-        }
         
         let titleTextAttributes: [NSAttributedString.Key: Any] = [
                     .foregroundColor: UIColor.white, // 변경할 색상 지정
